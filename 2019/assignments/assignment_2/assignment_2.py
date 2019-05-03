@@ -5,24 +5,32 @@
 # Comments: ---
 ######################################################################
 
+import math
+            
 class Coordinates:
-    def __init__(self, new_lat, new_lon):
-        print("init")
-        self.lat = new_lat
-        self.lon = new_lon
-
+    def __init__(self, lat, lon):
+        self.lat = lat
+        self.lon = lon
 
 
     @property
     def lat(self):
-        print("getter")
         return self._lat
 
     @lat.setter
     def lat(self, value):
-        print("hi1")
-        self._lat = value
+        try:
+            value = float(value)
+        
+        except:
+            raise TypeError("Input a float!") 
+            
 
+        if (value <= 90 and value > -90):
+            self._lat = value
+
+        else:
+            raise ValueError("Input a Number between -90/90!") 
 
 
     @property
@@ -31,28 +39,42 @@ class Coordinates:
 
     @lon.setter
     def lon(self, value):
-        print("hi2")
-        self._lon = value
+
+        try:
+            value = float(value) 
+        
+        except:
+            raise TypeError("Input a float!")  
+
+        if (value <= 180 and value > -180):
+            self._lon = value
+
+        else:
+            raise ValueError("Input a Number between -180/180!") 
+                   
+        
+        
 
 
 
     @classmethod
     def distance(cls, coord_1, coord_2):
         #rueckgabe als float
-        distance = 6371 * arccos(sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * cos(lon2 - lon1))
+        lat1 = coord_1.lat
+        lat1 = coord_1.lon
+        lon2 = coord_2.lat
+        lat2 = coord_2.lon
+
+        distance = float(6371 * math.acos(math.sin(lat1) * math.sin(lat2) + math.cos(lat1) * math.cos(lat2) * math.cos(lon2 - lon1)))
+        return distance
+
+    
+
+class 
 
 
-    def is_float(value):
-        print("Test")
-        try:
-            value = float(value)
-            return value
-        except ValueError:
-            print ("Must be convertable to float!")
-
-
-Bewertungsobjekt = Coordinates("1.111", "15.455678")
+Bewertungsobjekt = Coordinates("48.021329", "11.594557")
 print(Bewertungsobjekt.lat)
-Bewertungsobjekt.lat = 455678
+print(Bewertungsobjekt.lon)
 
-print(Bewertungsobjekt.lat)
+
