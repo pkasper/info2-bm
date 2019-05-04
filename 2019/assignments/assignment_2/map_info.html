@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_f7429df470b64bf18ace389d931c7578 {
+        position: relative;
+        width: 800.0px;
+        height: 800.0px;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_f7429df470b64bf18ace389d931c7578" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_f7429df470b64bf18ace389d931c7578 = L.map(
+        'map_f7429df470b64bf18ace389d931c7578', {
+        center: [50.12700000000001, 9.224499999999999],
+        zoom: 6,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_dc6c11dde5dd4b899e7c783acaa6e5d1 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_f7429df470b64bf18ace389d931c7578);
+    
+            var marker_cluster_aa7fce79daf346d8aaaf8acd016565b1 = L.markerClusterGroup({});
+            map_f7429df470b64bf18ace389d931c7578.addLayer(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+            
+    
+        var marker_786fac4e9e21402a930854fc44330b05 = L.marker(
+            [47.047, 15.39],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_addd7bb22b364a1684330e10ba53ef61 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_bdd23dd7740d48a8ba1cdd5e1c7efc7f = $(`<div id="html_bdd23dd7740d48a8ba1cdd5e1c7efc7f" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 2279<br><b>City:</b> Graz<br><b>Population:</b> 263234.0<br><b>Address:</b> Grottenhofstraße, Graz, Steiermark 8052, AUT<br><b>Distance to centre:</b> 3.74km</div>`)[0];
+                popup_addd7bb22b364a1684330e10ba53ef61.setContent(html_bdd23dd7740d48a8ba1cdd5e1c7efc7f);
+            
+
+            marker_786fac4e9e21402a930854fc44330b05.bindPopup(popup_addd7bb22b364a1684330e10ba53ef61)
+            ;
+
+            
+        
+    
+        marker_786fac4e9e21402a930854fc44330b05.bindTooltip(
+            `<div>`
+            + `Graz` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_9fefd115201e427c80ffd0cf4792bdd2 = L.marker(
+            [52.402, 9.692],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_007c3c79f5b640fd8ea9295ab52f6a97 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_7f6f76eabce944b09b229af25289bea8 = $(`<div id="html_7f6f76eabce944b09b229af25289bea8" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 2648<br><b>City:</b> Hannover<br><b>Population:</b> 722490.0<br><b>Address:</b> Wernigeroder Weg 1, Hannover, Niedersachsen 30419, DEU<br><b>Distance to centre:</b> 4.24km</div>`)[0];
+                popup_007c3c79f5b640fd8ea9295ab52f6a97.setContent(html_7f6f76eabce944b09b229af25289bea8);
+            
+
+            marker_9fefd115201e427c80ffd0cf4792bdd2.bindPopup(popup_007c3c79f5b640fd8ea9295ab52f6a97)
+            ;
+
+            
+        
+    
+        marker_9fefd115201e427c80ffd0cf4792bdd2.bindTooltip(
+            `<div>`
+            + `Hannover` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_61aa3e65cdc040ccaad4ed0efd8d2b35 = L.marker(
+            [51.239, 6.794],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_4dc2a7a159d04a6c95d60aa6e6154aca = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_23e86e95b6a94efeb905df4a3a4a263c = $(`<div id="html_23e86e95b6a94efeb905df4a3a4a263c" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 5569<br><b>City:</b> Düsseldorf<br><b>Population:</b> 1220000.0<br><b>Address:</b> Marc-Chagall-Straße 106, Düsseldorf, Nordrhein-Westfalen 40477, DEU<br><b>Distance to centre:</b> 2.29km</div>`)[0];
+                popup_4dc2a7a159d04a6c95d60aa6e6154aca.setContent(html_23e86e95b6a94efeb905df4a3a4a263c);
+            
+
+            marker_61aa3e65cdc040ccaad4ed0efd8d2b35.bindPopup(popup_4dc2a7a159d04a6c95d60aa6e6154aca)
+            ;
+
+            
+        
+    
+        marker_61aa3e65cdc040ccaad4ed0efd8d2b35.bindTooltip(
+            `<div>`
+            + `Düsseldorf` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_cea3a4ab3c204145b13926740cb3b9c6 = L.marker(
+            [53.567, 9.905],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_e103ddc1951d4816b62d8e0e64ae43cb = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_11e0da9f69f342a0be5cae9592f3056f = $(`<div id="html_11e0da9f69f342a0be5cae9592f3056f" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 4736<br><b>City:</b> Hamburg<br><b>Population:</b> 1757000.0<br><b>Address:</b> Haydnstraße 9, Hamburg, Hamburg 22761, DEU<br><b>Distance to centre:</b> 6.55km</div>`)[0];
+                popup_e103ddc1951d4816b62d8e0e64ae43cb.setContent(html_11e0da9f69f342a0be5cae9592f3056f);
+            
+
+            marker_cea3a4ab3c204145b13926740cb3b9c6.bindPopup(popup_e103ddc1951d4816b62d8e0e64ae43cb)
+            ;
+
+            
+        
+    
+        marker_cea3a4ab3c204145b13926740cb3b9c6.bindTooltip(
+            `<div>`
+            + `Hamburg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_76bb2f6f382647bd9d4fa675ed643d96 = L.marker(
+            [48.791, 9.164],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_edd45a9772754159b27c56ed33054c61 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b6b15499c2334e08806bbad00623e407 = $(`<div id="html_b6b15499c2334e08806bbad00623e407" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 151<br><b>City:</b> Stuttgart<br><b>Population:</b> 2944700.0<br><b>Address:</b> Schottstraße 28, Stuttgart, Baden-Württemberg 70192, DEU<br><b>Distance to centre:</b> 2.91km</div>`)[0];
+                popup_edd45a9772754159b27c56ed33054c61.setContent(html_b6b15499c2334e08806bbad00623e407);
+            
+
+            marker_76bb2f6f382647bd9d4fa675ed643d96.bindPopup(popup_edd45a9772754159b27c56ed33054c61)
+            ;
+
+            
+        
+    
+        marker_76bb2f6f382647bd9d4fa675ed643d96.bindTooltip(
+            `<div>`
+            + `Stuttgart` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_d3be8ea25bf74952aa0593c203cc9dd3 = L.marker(
+            [48.738, 9.23],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_7ba2cc398acf4539a1c256391e94c31c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d478765997af4500a6ee37ffb5fee3e5 = $(`<div id="html_d478765997af4500a6ee37ffb5fee3e5" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 456<br><b>City:</b> Stuttgart<br><b>Population:</b> 2944700.0<br><b>Address:</b> Bernsteinstraße 29, Stuttgart, Baden-Württemberg 70619, DEU<br><b>Distance to centre:</b> 5.16km</div>`)[0];
+                popup_7ba2cc398acf4539a1c256391e94c31c.setContent(html_d478765997af4500a6ee37ffb5fee3e5);
+            
+
+            marker_d3be8ea25bf74952aa0593c203cc9dd3.bindPopup(popup_7ba2cc398acf4539a1c256391e94c31c)
+            ;
+
+            
+        
+    
+        marker_d3be8ea25bf74952aa0593c203cc9dd3.bindTooltip(
+            `<div>`
+            + `Stuttgart` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_2258a1f1963f40c1a41a09bde7a8c3b1 = L.marker(
+            [48.76600000000001, 9.178],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_a281be13c3ba46898ef8689cb30584aa = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_6a1c5e1b26ed4a038a54f8f6d7cd70b4 = $(`<div id="html_6a1c5e1b26ed4a038a54f8f6d7cd70b4" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 723<br><b>City:</b> Stuttgart<br><b>Population:</b> 2944700.0<br><b>Address:</b> Alexanderstraße 156, Stuttgart, Baden-Württemberg 70180, DEU<br><b>Distance to centre:</b> 2.24km</div>`)[0];
+                popup_a281be13c3ba46898ef8689cb30584aa.setContent(html_6a1c5e1b26ed4a038a54f8f6d7cd70b4);
+            
+
+            marker_2258a1f1963f40c1a41a09bde7a8c3b1.bindPopup(popup_a281be13c3ba46898ef8689cb30584aa)
+            ;
+
+            
+        
+    
+        marker_2258a1f1963f40c1a41a09bde7a8c3b1.bindTooltip(
+            `<div>`
+            + `Stuttgart` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_7368e6f3102a4b4f809f116282ab0149 = L.marker(
+            [48.825, 9.219],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_da1503be69884a5582d4717b43d78375 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f121ff1aff9941dd9eb24258df0dad7c = $(`<div id="html_f121ff1aff9941dd9eb24258df0dad7c" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 1715<br><b>City:</b> Stuttgart<br><b>Population:</b> 2944700.0<br><b>Address:</b> Neckartalstraße 403, Stuttgart, Baden-Württemberg 70376, DEU<br><b>Distance to centre:</b> 5.19km</div>`)[0];
+                popup_da1503be69884a5582d4717b43d78375.setContent(html_f121ff1aff9941dd9eb24258df0dad7c);
+            
+
+            marker_7368e6f3102a4b4f809f116282ab0149.bindPopup(popup_da1503be69884a5582d4717b43d78375)
+            ;
+
+            
+        
+    
+        marker_7368e6f3102a4b4f809f116282ab0149.bindTooltip(
+            `<div>`
+            + `Stuttgart` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_bcce25b9225748278f5632900a793e89 = L.marker(
+            [51.114, 13.78],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_b25ec53f08184791a0a47f185f458d39 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d381d8cfa8ec4183968d4fcb31e6e355 = $(`<div id="html_d381d8cfa8ec4183968d4fcb31e6e355" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 572<br><b>City:</b> Dresden<br><b>Population:</b> 617515.0<br><b>Address:</b> Kieler Straße 24, Dresden, Sachsen 01109, DEU<br><b>Distance to centre:</b> 7.42km</div>`)[0];
+                popup_b25ec53f08184791a0a47f185f458d39.setContent(html_d381d8cfa8ec4183968d4fcb31e6e355);
+            
+
+            marker_bcce25b9225748278f5632900a793e89.bindPopup(popup_b25ec53f08184791a0a47f185f458d39)
+            ;
+
+            
+        
+    
+        marker_bcce25b9225748278f5632900a793e89.bindTooltip(
+            `<div>`
+            + `Dresden` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_ccc5785f3cd84537bda008ff02edc374 = L.marker(
+            [51.058, 13.776],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_cf8dbd1d1461427eb7b9a03cf27b1f85 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5324e7918d6a4415a1ed11c26742ea6d = $(`<div id="html_5324e7918d6a4415a1ed11c26742ea6d" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 3739<br><b>City:</b> Dresden<br><b>Population:</b> 617515.0<br><b>Address:</b> Pfotenhauerstraße 88, Dresden, Sachsen 01307, DEU<br><b>Distance to centre:</b> 2.02km</div>`)[0];
+                popup_cf8dbd1d1461427eb7b9a03cf27b1f85.setContent(html_5324e7918d6a4415a1ed11c26742ea6d);
+            
+
+            marker_ccc5785f3cd84537bda008ff02edc374.bindPopup(popup_cf8dbd1d1461427eb7b9a03cf27b1f85)
+            ;
+
+            
+        
+    
+        marker_ccc5785f3cd84537bda008ff02edc374.bindTooltip(
+            `<div>`
+            + `Dresden` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_00de51254068466d96b165d35c0fa319 = L.marker(
+            [51.455, 6.67],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_b4323f6237eb4c3d96533787130f96b5 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_d5640a5dcae442e2bc44e1216419858c = $(`<div id="html_d5640a5dcae442e2bc44e1216419858c" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 2940<br><b>City:</b> Duisburg<br><b>Population:</b> 1276757.0<br><b>Address:</b> Kornstraße 4, Moers, Nordrhein-Westfalen 47443, DEU<br><b>Distance to centre:</b> 6.20km</div>`)[0];
+                popup_b4323f6237eb4c3d96533787130f96b5.setContent(html_d5640a5dcae442e2bc44e1216419858c);
+            
+
+            marker_00de51254068466d96b165d35c0fa319.bindPopup(popup_b4323f6237eb4c3d96533787130f96b5)
+            ;
+
+            
+        
+    
+        marker_00de51254068466d96b165d35c0fa319.bindTooltip(
+            `<div>`
+            + `Duisburg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_4134a8372da64c758ea925be43421904 = L.marker(
+            [51.492, 7.059],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_efb008154b274807852c667d9a8451cc = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_24cb497cf39b4a98889474fcbfcb4757 = $(`<div id="html_24cb497cf39b4a98889474fcbfcb4757" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 1915<br><b>City:</b> Essen<br><b>Population:</b> 1742135.0<br><b>Address:</b> Maria-Weber-Weg 20, Essen, Nordrhein-Westfalen 45327, DEU<br><b>Distance to centre:</b> 5.52km</div>`)[0];
+                popup_efb008154b274807852c667d9a8451cc.setContent(html_24cb497cf39b4a98889474fcbfcb4757);
+            
+
+            marker_4134a8372da64c758ea925be43421904.bindPopup(popup_efb008154b274807852c667d9a8451cc)
+            ;
+
+            
+        
+    
+        marker_4134a8372da64c758ea925be43421904.bindTooltip(
+            `<div>`
+            + `Essen` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_e561948b399845c3b1ca7b71616d838d = L.marker(
+            [51.435, 6.973],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_d23b1430e41d41a2b384d06b3fd2ddde = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_da40d71a063340b7816b68696beda9ed = $(`<div id="html_da40d71a063340b7816b68696beda9ed" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 2011<br><b>City:</b> Essen<br><b>Population:</b> 1742135.0<br><b>Address:</b> Im Stillen Winkel 17, Essen, Nordrhein-Westfalen 45149, DEU<br><b>Distance to centre:</b> 3.45km</div>`)[0];
+                popup_d23b1430e41d41a2b384d06b3fd2ddde.setContent(html_da40d71a063340b7816b68696beda9ed);
+            
+
+            marker_e561948b399845c3b1ca7b71616d838d.bindPopup(popup_d23b1430e41d41a2b384d06b3fd2ddde)
+            ;
+
+            
+        
+    
+        marker_e561948b399845c3b1ca7b71616d838d.bindTooltip(
+            `<div>`
+            + `Essen` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_492ff6667b7444bf804047580c516ed7 = L.marker(
+            [50.732, 7.069],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_0a6f9947df904148acbda1fa25193804 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_c9a701d7fa0e4bbfab84e0894b11cc53 = $(`<div id="html_c9a701d7fa0e4bbfab84e0894b11cc53" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 7287<br><b>City:</b> Bonn<br><b>Population:</b> 680543.0<br><b>Address:</b> Auf dem Hügel 30, Bonn, Nordrhein-Westfalen 53121, DEU<br><b>Distance to centre:</b> 1.49km</div>`)[0];
+                popup_0a6f9947df904148acbda1fa25193804.setContent(html_c9a701d7fa0e4bbfab84e0894b11cc53);
+            
+
+            marker_492ff6667b7444bf804047580c516ed7.bindPopup(popup_0a6f9947df904148acbda1fa25193804)
+            ;
+
+            
+        
+    
+        marker_492ff6667b7444bf804047580c516ed7.bindTooltip(
+            `<div>`
+            + `Bonn` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_9eaeb5ab8033491abe4643ccf2799790 = L.marker(
+            [53.151, 8.231],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_79288d6904cc421cbe0023c5867bb09b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_5b27e8ad10374dd69932d542774a76fa = $(`<div id="html_5b27e8ad10374dd69932d542774a76fa" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 593<br><b>City:</b> Oldenburg<br><b>Population:</b> 167458.0<br><b>Address:</b> Junkerburg 17, Oldenburg (Oldb.), Niedersachsen 26123, DEU<br><b>Distance to centre:</b> 2.45km</div>`)[0];
+                popup_79288d6904cc421cbe0023c5867bb09b.setContent(html_5b27e8ad10374dd69932d542774a76fa);
+            
+
+            marker_9eaeb5ab8033491abe4643ccf2799790.bindPopup(popup_79288d6904cc421cbe0023c5867bb09b)
+            ;
+
+            
+        
+    
+        marker_9eaeb5ab8033491abe4643ccf2799790.bindTooltip(
+            `<div>`
+            + `Oldenburg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_b096910b5cec4d60929b3788241735bb = L.marker(
+            [48.374, 10.908],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_05958c9da1d6400db246293f76a2c7d1 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_0fc3d9fd7b574675a4ffbade32d85b23 = $(`<div id="html_0fc3d9fd7b574675a4ffbade32d85b23" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 5181<br><b>City:</b> Augsburg<br><b>Population:</b> 358989.0<br><b>Address:</b> Oblatterwallstraße 32, Augsburg, Bayern 86153, DEU<br><b>Distance to centre:</b> 2.73km</div>`)[0];
+                popup_05958c9da1d6400db246293f76a2c7d1.setContent(html_0fc3d9fd7b574675a4ffbade32d85b23);
+            
+
+            marker_b096910b5cec4d60929b3788241735bb.bindPopup(popup_05958c9da1d6400db246293f76a2c7d1)
+            ;
+
+            
+        
+    
+        marker_b096910b5cec4d60929b3788241735bb.bindTooltip(
+            `<div>`
+            + `Augsburg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_7040daece76548f1b7908070a7235fad = L.marker(
+            [49.803, 9.978],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_25927ab1545e46d79c393d6c300b771f = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_f7ae037edc3641778e2a2a2646bdda7f = $(`<div id="html_f7ae037edc3641778e2a2a2646bdda7f" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 5189<br><b>City:</b> Würzburg<br><b>Population:</b> 168561.0<br><b>Address:</b> Werner-von-Siemens-Straße 46C, Würzburg, Bayern 97076, DEU<br><b>Distance to centre:</b> 2.03km</div>`)[0];
+                popup_25927ab1545e46d79c393d6c300b771f.setContent(html_f7ae037edc3641778e2a2a2646bdda7f);
+            
+
+            marker_7040daece76548f1b7908070a7235fad.bindPopup(popup_25927ab1545e46d79c393d6c300b771f)
+            ;
+
+            
+        
+    
+        marker_7040daece76548f1b7908070a7235fad.bindTooltip(
+            `<div>`
+            + `Würzburg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_a2b44886a6df4b04a90a3ba71005c6f9 = L.marker(
+            [49.369, 11.069],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_dc9c9bd33f3d4e068042abc411c3ec5b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_901e5378ba0f4256a5978cc0e6abef08 = $(`<div id="html_901e5378ba0f4256a5978cc0e6abef08" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 3811<br><b>City:</b> Nürnberg<br><b>Population:</b> 737304.0<br><b>Address:</b> Türkheimer Straße 9, Nürnberg, Bayern 90455, DEU<br><b>Distance to centre:</b> 9.04km</div>`)[0];
+                popup_dc9c9bd33f3d4e068042abc411c3ec5b.setContent(html_901e5378ba0f4256a5978cc0e6abef08);
+            
+
+            marker_a2b44886a6df4b04a90a3ba71005c6f9.bindPopup(popup_dc9c9bd33f3d4e068042abc411c3ec5b)
+            ;
+
+            
+        
+    
+        marker_a2b44886a6df4b04a90a3ba71005c6f9.bindTooltip(
+            `<div>`
+            + `Nürnberg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_b0beafea6d164841890ce320b15fdc45 = L.marker(
+            [49.444, 11.052],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_d59875c373574245b64903b1213a663a = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_b1cd3cfe5a9741f4b7f04e4a2047c6b8 = $(`<div id="html_b1cd3cfe5a9741f4b7f04e4a2047c6b8" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 4899<br><b>City:</b> Nürnberg<br><b>Population:</b> 737304.0<br><b>Address:</b> Wolgemutstraße 20, Nürnberg, Bayern 90439, DEU<br><b>Distance to centre:</b> 2.13km</div>`)[0];
+                popup_d59875c373574245b64903b1213a663a.setContent(html_b1cd3cfe5a9741f4b7f04e4a2047c6b8);
+            
+
+            marker_b0beafea6d164841890ce320b15fdc45.bindPopup(popup_d59875c373574245b64903b1213a663a)
+            ;
+
+            
+        
+    
+        marker_b0beafea6d164841890ce320b15fdc45.bindTooltip(
+            `<div>`
+            + `Nürnberg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_fd7f7f67218f47b5917f50b9a1d957e5 = L.marker(
+            [49.449, 11.07],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_ceedc23febe74dd0980d34df1e45a74e = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_18f1a65a263744d39efc0ed984dcfcd2 = $(`<div id="html_18f1a65a263744d39efc0ed984dcfcd2" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 7392<br><b>City:</b> Nürnberg<br><b>Population:</b> 737304.0<br><b>Address:</b> Jakobsplatz 20, Nürnberg, Bayern 90402, DEU<br><b>Distance to centre:</b> 0.73km</div>`)[0];
+                popup_ceedc23febe74dd0980d34df1e45a74e.setContent(html_18f1a65a263744d39efc0ed984dcfcd2);
+            
+
+            marker_fd7f7f67218f47b5917f50b9a1d957e5.bindPopup(popup_ceedc23febe74dd0980d34df1e45a74e)
+            ;
+
+            
+        
+    
+        marker_fd7f7f67218f47b5917f50b9a1d957e5.bindTooltip(
+            `<div>`
+            + `Nürnberg` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_6c5a890c2b0d4e65a09c5a67cb03c39f = L.marker(
+            [50.128, 8.728],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_f2d3b195d19f4c9e91da9486a476ca68 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_2cdd074ce7a74c3898d6e607d48a7d92 = $(`<div id="html_2cdd074ce7a74c3898d6e607d48a7d92" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 761<br><b>City:</b> Frankfurt<br><b>Population:</b> 2895000.0<br><b>Address:</b> Johanna-Tesch-Platz 11, Frankfurt am Main, Hessen 60386, DEU<br><b>Distance to centre:</b> 4.90km</div>`)[0];
+                popup_f2d3b195d19f4c9e91da9486a476ca68.setContent(html_2cdd074ce7a74c3898d6e607d48a7d92);
+            
+
+            marker_6c5a890c2b0d4e65a09c5a67cb03c39f.bindPopup(popup_f2d3b195d19f4c9e91da9486a476ca68)
+            ;
+
+            
+        
+    
+        marker_6c5a890c2b0d4e65a09c5a67cb03c39f.bindTooltip(
+            `<div>`
+            + `Frankfurt` + `</div>`,
+            {"sticky": true}
+        );
+        
+    
+        var marker_1e01727bbe7e4464a8952c820cd1b673 = L.marker(
+            [50.12600000000001, 8.698],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(marker_cluster_aa7fce79daf346d8aaaf8acd016565b1);
+        
+    
+            var popup_98e545c5a9d742fb8dc778dd8ec73341 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_e44a7eabb8514c7f8142b0926f913f4b = $(`<div id="html_e44a7eabb8514c7f8142b0926f913f4b" style="width: 100.0%; height: 100.0%;"><b>Sensor ID:</b> 996<br><b>City:</b> Frankfurt<br><b>Population:</b> 2895000.0<br><b>Address:</b> Rothschildallee, Frankfurt am Main, Hessen 60389, DEU<br><b>Distance to centre:</b> 3.32km</div>`)[0];
+                popup_98e545c5a9d742fb8dc778dd8ec73341.setContent(html_e44a7eabb8514c7f8142b0926f913f4b);
+            
+
+            marker_1e01727bbe7e4464a8952c820cd1b673.bindPopup(popup_98e545c5a9d742fb8dc778dd8ec73341)
+            ;
+
+            
+        
+    
+        marker_1e01727bbe7e4464a8952c820cd1b673.bindTooltip(
+            `<div>`
+            + `Frankfurt` + `</div>`,
+            {"sticky": true}
+        );
+        
+</script>
