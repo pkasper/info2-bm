@@ -70,11 +70,12 @@ class Coordinates:
 
     
 
-class 
+#class city
 
 
 Bewertungsobjekt = Coordinates("48.021329", "11.594557")
 print(Bewertungsobjekt.lat)
 print(Bewertungsobjekt.lon)
+Coordinates.distance(Bewertungsobjekt, Bewertungsobjekt)
 
 
