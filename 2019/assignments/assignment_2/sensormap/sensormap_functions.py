@@ -5,8 +5,11 @@
 # Comments: ---
 ######################################################################
 import pandas, numpy
+from .coordinates import Coordinates
+from .city import City
 
 def read_cities(path, countries=[]):
+    countries =  [c.lower() for c in countries]
     print(countries[0])
     colorcode = ['red', 'blue', 'green', 'purple', 'orange', 'darkred',\
              'lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue',\
@@ -14,44 +17,40 @@ def read_cities(path, countries=[]):
              'gray', 'black', 'lightgray']
     citylist = []    
     data = pandas.read_csv(path)
-    data.info()
+
     
     if len(countries) == 0:
-            
+        
         for index, row in data.iterrows():
-            if row['city'] == "Stuttgart":
-                print("Success")
-                citylist.append(row['city'])
-            
-                #citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], colorcode))
-    
-        print(citylist)
-        
-       
-       
-        
-        
-        
+            citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], numpy.random.choice(colorcode)))
+
+                  
     else:
        
         for index, row in data.iterrows():
-            for i in countries:
-                print(countries[i])
-                if row['country'] == countries[i]:
-                    print("Success")
-                    citylist.append(row['city'])
-                
-                    #citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], colorcode))
+            if row['country'].lower() in countries:           
+                citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], numpy.random.choice(colorcode)))
         
-        print(citylist)
-
+    return citylist
+            
 
 
 def find_nearest_city(cities, coords):
-    print("Hello")
+
+    distance = np.inf
+    nearest_city = None
+
+    for city in cities:
+
+        if Coordinates.distance(coords, city.coords) < distance and Coordinates.distance(coords, city.coords) < 10:
+            distance = Coordinates.distance(coords, city.coords)
+            nearest_city = city
+
+    return nearest_city
+        
 
 def parse_sensors(data_path, cities):
-    print("Hello")
+    pass
 
 def create_map(plot_list, filename, plot_sensor_values=False, smooth=False, zoom=10):
-    print("Hello")
+    pass

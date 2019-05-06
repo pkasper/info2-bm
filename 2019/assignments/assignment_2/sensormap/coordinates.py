@@ -57,10 +57,10 @@ class Coordinates:
     @classmethod
     def distance(cls, coord_1, coord_2):
         #rueckgabe als float
-        lat1 = coord_1.lat
-        lon1 = coord_1.lon
-        lat2 = coord_2.lat
-        lon2 = coord_2.lon
+        lat1 = math.radians(coord_1.lat)
+        lon1 = math.radians(coord_1.lon)
+        lat2 = math.radians(coord_2.lat)
+        lon2 = math.radians(coord_2.lon)
 
         distance = float(6371 * math.acos(math.sin(lat1) * math.sin(lat2) + math.cos(lat1) * math.cos(lat2) * math.cos(lon2 - lon1)))
 

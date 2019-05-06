@@ -5,7 +5,9 @@
 # Comments: ---
 ######################################################################
 from geopy.geocoders import ArcGIS
-import bokeh, matplotlib
+from bokeh.models import Band, HoverTool, ColumnDataSource
+from bokeh.plotting import figure
+from .coordinates import Coordinates
 
 class Sensor:
     def __init__(self, sensor_id, city, coords, data):
@@ -53,20 +55,18 @@ class Sensor:
 
     @property
     def address(self):
-        first_call = True
-        if first_call == True:
-            self._address = geolocator.reverse((coords.lat, coords.lon)).address
-            first_call = False
-            
-        else:
-            return self._address  
+        if self._address is None:
+            self._address = geolocator.reverse((self.coords.lat, self.coords.lon)).address
+        return self._address  
 
     
     def create_bokeh_plot(self, smooth=False):
+        data = self.data.copy(deep=True)
         if smooth == True:
             print("yes")
-            #data[['P1', 'P2']] = data.rolling("30d", on="timestamp").mean()[['P1', 'P2']]
-            
+
+            data[['P1', 'P2']] = data.rolling(smooth, on="timestamp").mean()[['P1', 'P2']
+        
             #fill_between() von Matplotlib
             #Bokeh HoverTool um einen Mouseover Effekt bei den Popups   
             #HoverTools den Parameter mode auf ”vline” und den Parameter point_policy auf ”follow_mouse”.
@@ -75,3 +75,29 @@ class Sensor:
             #Höhe des Bokeh Plots auf 300px, die Breite auf 400px
         else:
             print("no")
+
+        source = ColumnDataSource(data)
+        bokehfig = figure(title="Sensor:"+self.id, x_axis_label='Time in d', y_axis_label='y', x_label_type='datetime', plot_width='400px', plot_height='300px')
+        p1 = bokehfig.line(x="timestamp", y="P1", line_width=1, source=source)
+        p2 = bokehfig.line(x="timestamp", y="P2", line_width=1, source=source)
+
+        bokehfig_hovertool = HoverTool(
+            tooltips=[
+                ( 'date',   '@timestamp{%F}' ),
+                ( 'p1',  '@P1' ),
+                ( 'p2',  '@P2' ),
+            ],
+
+            mode='vline',
+            point_policy = 'follow_mouse',
+            renderers = [p1]
+        )
+
+        band1 = Band(base='timestamp', lower=0, upper='P1', line_width=3, fill_color='orange', line_color='orange', source=source)
+        band2 = Band(base='timestamp', lower=0, upper='P2', line_width=3, fill_color='blue', line_color='blue', source=source)
+
+        bokehfig.add_layout(band1)
+        bokehfig.add_layout(band2)
+        bokehfig.add_tools(bokehfig_hovertool)
+
+        return bokehfig

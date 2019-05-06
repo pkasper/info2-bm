@@ -4,6 +4,7 @@
 # Description: Ass 2
 # Comments: ---
 ######################################################################
+from .sensor import Sensor
 
 class City:
     def __init__(self, name, coords, population, country, colorcode):
