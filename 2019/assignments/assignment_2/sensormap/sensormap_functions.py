@@ -4,7 +4,8 @@
 # Description: Ass 2
 # Comments: ---
 ######################################################################
-import pandas, numpy
+import pandas
+import numpy as np
 from .coordinates import Coordinates
 from .city import City
 
@@ -22,14 +23,14 @@ def read_cities(path, countries=[]):
     if len(countries) == 0:
         
         for index, row in data.iterrows():
-            citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], numpy.random.choice(colorcode)))
+            citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], np.random.choice(colorcode)))
 
                   
     else:
        
         for index, row in data.iterrows():
             if row['country'].lower() in countries:           
-                citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], numpy.random.choice(colorcode)))
+                citylist.append(City(row['city'], Coordinates(row['lat'],row['lng']), row['population'], row['country'], np.random.choice(colorcode)))
         
     return citylist
             
@@ -50,7 +51,11 @@ def find_nearest_city(cities, coords):
         
 
 def parse_sensors(data_path, cities):
-    pass
+    data = pandas.read_csv(data_path)
+    print(data)
+    
+    #find_nearest_city(cities, coords)
+    
 
 def create_map(plot_list, filename, plot_sensor_values=False, smooth=False, zoom=10):
     pass

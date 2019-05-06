@@ -5,8 +5,9 @@
 # Comments: ---
 ######################################################################
 from geopy.geocoders import ArcGIS
-from bokeh.models import Band, HoverTool, ColumnDataSource
 from bokeh.plotting import figure
+from bokeh.models import Band, HoverTool, ColumnDataSource
+
 from .coordinates import Coordinates
 
 class Sensor:
@@ -63,18 +64,8 @@ class Sensor:
     def create_bokeh_plot(self, smooth=False):
         data = self.data.copy(deep=True)
         if smooth == True:
-            print("yes")
-
-            data[['P1', 'P2']] = data.rolling(smooth, on="timestamp").mean()[['P1', 'P2']
-        
-            #fill_between() von Matplotlib
-            #Bokeh HoverTool um einen Mouseover Effekt bei den Popups   
-            #HoverTools den Parameter mode auf ”vline” und den Parameter point_policy auf ”follow_mouse”.
-            #binden Sie es nur an die Linie von P1 (die Sie zusätzlich zum Band geplottet haben). 
-            # Dies können Sie mit dem Parameter renderers() beim HoverTool
-            #Höhe des Bokeh Plots auf 300px, die Breite auf 400px
-        else:
-            print("no")
+            data[['P1', 'P2']] = data.rolling(smooth, on="timestamp").mean()[['P1', 'P2']]
+    
 
         source = ColumnDataSource(data)
         bokehfig = figure(title="Sensor:"+self.id, x_axis_label='Time in d', y_axis_label='y', x_label_type='datetime', plot_width='400px', plot_height='300px')
