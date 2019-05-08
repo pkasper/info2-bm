@@ -4,11 +4,12 @@
 # Description: Ass 2
 # Comments: ---
 ######################################################################
-from .sensor import Sensor
+#from .sensor import Sensor
+from .coordinates import Coordinates
 
 class City:
     def __init__(self, name, coords, population, country, colorcode):
-        if type(new_address) == str:
+        if type(name) == str:
             self._name = name
 
         else: 
@@ -17,7 +18,7 @@ class City:
         if isinstance(coords, Coordinates):
             self._coords = coords
         else:
-            raise TypeError("Input an Coordinates-Object!")
+            raise TypeError("Input an Coordinates-object!")
 
         try:
             self._population = float(population) 

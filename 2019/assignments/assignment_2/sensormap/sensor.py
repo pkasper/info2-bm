@@ -9,6 +9,7 @@ from bokeh.plotting import figure
 from bokeh.models import Band, HoverTool, ColumnDataSource
 
 from .coordinates import Coordinates
+from .city import City
 
 class Sensor:
     def __init__(self, sensor_id, city, coords, data):
@@ -25,12 +26,12 @@ class Sensor:
         if isinstance(city, City):
             self._city = city
         else:
-            raise TypeError("Input an City-Object!")
+            raise TypeError("Input an City-object!")
         
         if isinstance(coords, Coordinates):
             self._coords = coords
         else:
-            raise TypeError("Input an Coordinates-Object!")
+            raise TypeError("Input an Coordinates-object!")
 
     
     
